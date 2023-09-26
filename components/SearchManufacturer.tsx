@@ -20,7 +20,7 @@ const SearchManufacturer = ({ manufacturer, setManufacturer }: SearchManufacture
 
   return (
     <div className='search-manufacturer'>
-      <Combobox>
+      <Combobox value={manufacturer} onChange={setManufacturer}>
         <div className="relative w-full">
           <Combobox.Button className="absolute top-[14px]" >
             <Image
@@ -52,7 +52,7 @@ const SearchManufacturer = ({ manufacturer, setManufacturer }: SearchManufacture
                 >
                   Create "{query}"
                 </Combobox.Option>
-              ) : (
+               ) : (
                 filteredManufactureres.map((item) => (
                   <Combobox.Option
                     key={item}
